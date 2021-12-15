@@ -1,2 +1,2 @@
-const ul = document.querySelector("ul")
-console.log("hello World")
+// let ul = document.querySelector("h1")
+// console.log(ul)
