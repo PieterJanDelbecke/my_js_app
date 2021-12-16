@@ -1,25 +1,21 @@
-function doMath(num1, num2, callback){
-    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
-        const err = new Error("Can only perform math on numbers")
-        callback(err)
+function useName (name, callback){
+    if( typeof name != 'string'){
+        const error = new Error("Name must be a string")
+        callback(error)
+    } else if (name.length < 1) {
+        const error = new Error("name cannot be empty")
+        callback(error)
+    } else {
+        callback(null, name)
+    }
+}
+
+function greet(error, name){
+    if (error){
+        console.log(error.message)
         return
     }
-    callback(null, num1,num2)
+    console.log("hello " + name)
 }
 
-function multiply(err,a,b){
-    if (err){
-        return console.error(err.message)
-    }
-    console.log(a * b)
-}
-
-function add(err, x,y){
-    if (err){
-        return console.error(err.message)
-    }
-    console.log(x + y)
-}
-
-doMath(2,5, multiply)
-doMath(3,3, add)
+useName("Pieter",greet)
