@@ -1,14 +1,13 @@
-function modifySentence(sentence, modifier){
-    return sentence.split(" ").map(modifier).join(" ")
-}
+const people = ["Alex","Harry","Bianca","Janel","Michael", "Jairo","Vancha"]
 
-function capitalise(word){
-    return word[0].toUpperCase()+ word.substring(1)
-}
+// people.forEach(person => console.log(person))
 
-function noCovid(word){
-    return word.toLowerCase() === 'covid19'? "#####" : word
-    }
+// function logger(element){
+//     console.log(element)
+// }
 
-console.log(modifySentence("hello there friend", capitalise))
-console.log(modifySentence("covid19 is a big mess",noCovid))
+// people.forEach(logger)
+
+people.forEach((person, index) => {
+    console.log(`${index + 1}. ${person}`)
+})
