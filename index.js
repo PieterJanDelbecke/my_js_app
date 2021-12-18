@@ -1,13 +1,16 @@
-const people = ["Alex","Harry","Bianca","Janel","Michael", "Jairo","Vancha"]
+const numbers = [1,2,3,4,5]
 
-// people.forEach(person => console.log(person))
+function addOne(number){
+    return number + 1
+}
 
-// function logger(element){
-//     console.log(element)
-// }
+function double(number){
+    return number * 2
+}
 
-// people.forEach(logger)
+newNumbers = numbers.map(addOne)
+newDouble = numbers.map(double)
 
-people.forEach((person, index) => {
-    console.log(`${index + 1}. ${person}`)
-})
+console.log(newNumbers)
+console.log(newDouble)
+
