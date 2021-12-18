@@ -1,14 +1,15 @@
-function processInput(input, callback){
-    callback(input)
+function add(a,b) {
+    console.log(a+b)
 }
 
-function greet(name) {
-    console.log(`Hello ${name}`)
+function multiply(x,y){
+    console.log(x*y)
 }
 
-function exitedGreet(name) {
-    console.log(`HI THERE ${name.toUpperCase()} GLAD THAT YOU'RE HERE!`)
+function doMath (num1, num2, cb) {
+    console.log("Processing")
+    cb(num1, num2)
 }
 
-processInput("Pieter-Jan", greet)
-processInput("Alessandra", exitedGreet)
+doMath(10,5, add)
+doMath(2,8, multiply)
