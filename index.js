@@ -1,15 +1,14 @@
-function add(a,b) {
-    console.log(a+b)
+function modifySentence(sentence, modifier){
+    return sentence.split(" ").map(modifier).join(" ")
 }
 
-function multiply(x,y){
-    console.log(x*y)
+function capitalise(word){
+    return word[0].toUpperCase()+ word.substring(1)
 }
 
-function doMath (num1, num2, cb) {
-    console.log("Processing")
-    cb(num1, num2)
-}
+function noCovid(word){
+    return word.toLowerCase() === 'covid19'? "#####" : word
+    }
 
-doMath(10,5, add)
-doMath(2,8, multiply)
+console.log(modifySentence("hello there friend", capitalise))
+console.log(modifySentence("covid19 is a big mess",noCovid))
