@@ -1,21 +1,14 @@
-function useName (name, callback){
-    if( typeof name != 'string'){
-        const error = new Error("Name must be a string")
-        callback(error)
-    } else if (name.length < 1) {
-        const error = new Error("name cannot be empty")
-        callback(error)
-    } else {
-        callback(null, name)
-    }
+function processInput(input, callback){
+    callback(input)
 }
 
-function greet(error, name){
-    if (error){
-        console.log(error.message)
-        return
-    }
-    console.log("hello " + name)
+function greet(name) {
+    console.log(`Hello ${name}`)
 }
 
-useName("Pieter",greet)
+function exitedGreet(name) {
+    console.log(`HI THERE ${name.toUpperCase()} GLAD THAT YOU'RE HERE!`)
+}
+
+processInput("Pieter-Jan", greet)
+processInput("Alessandra", exitedGreet)
