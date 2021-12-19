@@ -1,28 +1,18 @@
-function doMath(num1, num2, callback){
-    if (typeof num1 !== 'number' || typeof num2 !== 'number'){
-        const error = new Error("Can only be a number")
-        callback (error)
+function userName(name, callback){
+    if (typeof name !== 'string'){
+        const error = new Error("Name must be a string")
+        callback(error)
     } else {
-        callback(null, num1, num2)
+        callback(null, name)
     }
 }
 
-function multiply(err, num1, num2){
-    if (err){
-        console.log(err.message)
+function greet(error, name){
+    if (error){
+        console.log("Name must be a string")
     } else {
-        console.log (num1 * num2)
+        console.log(`Hello ${name}, welcome!`)
     }
 }
 
-function add(err, num1, num2){
-    if(err){
-        console.log(err.message)
-    } else {
-        console.log (num1 + num2)
-    }
-}
-
-doMath(2, 5, multiply)
-doMath(3, 3, add)
-
+userName("Pieter-Jan", greet)
