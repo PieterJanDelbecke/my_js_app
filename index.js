@@ -1,16 +1,9 @@
-const numbers = [1,2,3,4,5]
+const people = ["Alex","Harry","Bianca","Michael"]
 
-function addOne(number){
-    return number + 1
+function nameLength(name){
+    return name.length < 5
 }
 
-function double(number){
-    return number * 2
-}
+// console.log(people.filter(name => name.length < 5 ))
 
-newNumbers = numbers.map(addOne)
-newDouble = numbers.map(double)
-
-console.log(newNumbers)
-console.log(newDouble)
-
+console.log(people.filter(nameLength))
