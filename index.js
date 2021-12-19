@@ -1,18 +1,15 @@
-function userName(name, callback){
-    if (typeof name !== 'string'){
-        const error = new Error("Name must be a string")
-        callback(error)
-    } else {
-        callback(null, name)
+let newObject = {
+    firstName: "Pieter-Jan",
+    lastName: "Delbecke",
+    address:{
+        unit: 10,
+        number: 11,
+        street: 'Westminster Avenue',
+        suburb: 'Dee Why',
+        state: 'NSW'
     }
 }
 
-function greet(error, name){
-    if (error){
-        console.log("Name must be a string")
-    } else {
-        console.log(`Hello ${name}, welcome!`)
-    }
-}
+newObject.address.state = "QLD"
 
-userName("Pieter-Jan", greet)
+console.log(newObject)
