@@ -1,9 +1,6 @@
-const people = ["Alex","Harry","Bianca","Michael"]
+const array1 = [1,2,3,4]
 
-function nameLength(name){
-    return name.length < 5
+const reducer = (previousValue, currentValue) =>{
+    return previousValue + currentValue
 }
-
-// console.log(people.filter(name => name.length < 5 ))
-
-console.log(people.filter(nameLength))
+console.log(array1.reduce(reducer,5))
