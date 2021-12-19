@@ -1,15 +1,5 @@
-let newObject = {
-    firstName: "Pieter-Jan",
-    lastName: "Delbecke",
-    address:{
-        unit: 10,
-        number: 11,
-        street: 'Westminster Avenue',
-        suburb: 'Dee Why',
-        state: 'NSW'
-    }
-}
+let numbers = ["one","two","three"]
 
-newObject.address.state = "QLD"
-
-console.log(newObject)
+let two = numbers.splice(1,1)
+console.log(numbers)
+console.log(two)
