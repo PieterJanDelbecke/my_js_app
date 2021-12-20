@@ -1,5 +1,4 @@
-console.log("Hello World...111")
-setTimeout(()=>{
-    console.log("Hello World...222")
-},2000)
-console.log("Hello World...333")
+let myFirstPromise = Promise.resolve("My first promise, yay!")
+myFirstPromise.then(function(value){
+    console.log(value + "!!!")
+})
