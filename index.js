@@ -1,13 +1,5 @@
-let favouriteColour = "pink"
-
-switch(favouriteColour){
-    case "red":
-        console.log("Blood")
-        break
-    case "yellow":
-        console.log("Spirits")
-        break
-    default:
-        console.log("NOT HERE!")
-        break
+function add(x,y){
+    return x+y
 }
+
+console.log(add(5,5))
