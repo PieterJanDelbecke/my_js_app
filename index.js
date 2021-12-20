@@ -1,5 +1,5 @@
-function add(x,y){
-    return x+y
-}
-
-console.log(add(5,5))
+console.log("Hello World...111")
+setTimeout(()=>{
+    console.log("Hello World...222")
+},2000)
+console.log("Hello World...333")
