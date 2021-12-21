@@ -1,15 +1,8 @@
-function solution(str){
-    let arr = []
-
-    for (let i=0; i<str.length;i++){
-        arr.unshift(str.charAt(i))
-    }
-    let newArr = arr.join('')
-    return newArr
+function filter_list(l) {
+    // let arr = []
+    console.log(l.filter(item => typeof item === 'number'))
+    // console.log(arr)
 }
 
-solution('world')
-solution('hello')
-solution('word')
-solution('')
-solution('h')
+filter_list([1,2,'a','b'])
+filter_list([1,'a','b',0,15])
