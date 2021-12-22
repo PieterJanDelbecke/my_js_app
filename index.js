@@ -1,16 +1,7 @@
-function getCount(str) {
-    var vowelsCount = 0;
-    let vowels = ['a','e','i','o','u']
-    let newStr = str.split('')
-    for (let i = 0; i< vowels.length; i++){
-        newStr.forEach(item =>{
-            if (item === vowels[i]){
-                vowelsCount++
-            }
-        })
-    }
-    // console.log(vowelsCount)
-    return vowelsCount;
-  }
+function squareDigits(num){
+    // return num.toString().split('').map(element =>{return (square = Number(element) ** 2).toString()}).join('')
+    return Number((num.toString().split('').map(element =>{return (square = Number(element) ** 2).toString()}).join('')))
+}
 
-  getCount("abracadabra")
+squareDigits(3212)
+squareDigits(2112)
