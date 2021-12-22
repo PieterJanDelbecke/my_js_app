@@ -1,8 +1,16 @@
-function filter_list(l) {
-    // let arr = []
-    console.log(l.filter(item => typeof item === 'number'))
-    // console.log(arr)
-}
+function getCount(str) {
+    var vowelsCount = 0;
+    let vowels = ['a','e','i','o','u']
+    let newStr = str.split('')
+    for (let i = 0; i< vowels.length; i++){
+        newStr.forEach(item =>{
+            if (item === vowels[i]){
+                vowelsCount++
+            }
+        })
+    }
+    // console.log(vowelsCount)
+    return vowelsCount;
+  }
 
-filter_list([1,2,'a','b'])
-filter_list([1,'a','b',0,15])
+  getCount("abracadabra")
