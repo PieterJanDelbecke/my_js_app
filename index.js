@@ -1,7 +1,9 @@
-function squareDigits(num){
-    // return num.toString().split('').map(element =>{return (square = Number(element) ** 2).toString()}).join('')
-    return Number((num.toString().split('').map(element =>{return (square = Number(element) ** 2).toString()}).join('')))
+function sayHi(name){
+    console.log(name[0].toUpperCase()+ name.substring(1))
 }
 
-squareDigits(3212)
-squareDigits(2112)
+function greet(name, callback){
+    callback(name)
+}
+
+greet('emma', sayHi)
