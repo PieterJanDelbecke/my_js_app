@@ -1,19 +1,20 @@
-function evaluateNum (num){
-    if (typeof num === 'number'){
-        if (num > 100){
-            console.log(`${num} is greater than 100`)
-        }else if(num === 100){
-            console.log(`${num} is equal to 100`)
-        }else {
-            console.log(`${num} is smaller than 100`)
-        }
-    } else {
-        console.log(`${num} is not a number`)
+function stringOrNumber(input){
+    let dataType = typeof input
+    switch(dataType){
+        case 'number':
+            console.log(`${input} is a number`)
+            break
+        case 'string':
+            console.log(`${input} is a string`)
+            break
+        default:
+            console.log(`The input is not a number or string`)
+            break
     }
-
 }
 
-evaluateNum(101)
-evaluateNum(99)
-evaluateNum("a")
+stringOrNumber(100)
+stringOrNumber('Hello')
+stringOrNumber([1,5,99])
+stringOrNumber({firstName:'Adam', lastname: 'Ant'})
 
