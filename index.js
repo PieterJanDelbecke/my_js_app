@@ -1,15 +1,24 @@
-
-function loops(input){
-    let condition = true
-    while (condition){
-        num = Math.floor(Math.random() * 5 + 1)
-        if (num === input){
-            console.log(`YEAH, random number: ${num}, is equal to input number: ${input}`)
-            condition = false
-        } else {
-            console.log(`NO, random number: ${num} and input number: ${input} are not the same`)
-        }
+function doMath(num1,num2, callback){
+    if (typeof num1 !== 'number' || typeof num2 !=='number'){
+        const err = new Error("Can only perform on numbers")
+        return callback(err)
     }
+    callback(null, num1, num2)
 }
 
-loops(4)
+function multiply(err, a,b){
+    if(err){
+        return console.error(err.messsage)
+    }
+    console.log(a*b)
+}
+
+function add(err, x,y){
+    if (err){
+        return console.error(err.message)
+    }
+    console.log (x + y)
+}
+
+doMath(4,8, multiply)
+doMath(3,17, add)
