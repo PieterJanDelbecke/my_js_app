@@ -1,12 +1,11 @@
-function squareNumber(number){
-    return new Promise ((resolve,reject) =>{
-        if (typeof number !== 'number'){
-            reject(new Error("Input must be a number"))
+async function getPokemonTeam(teamSize){
+    try{
+        for (let i = 0; i < teamSize; i++){
+                let respones = await fetch(getRandomPokeUrl())
+                let pokemon = await Response.json()
+                ShowPokemon(pokemon)
         }
-        resolve (number  * number)
-    })
+    } catch(error){
+        console.log(error)
+    }
 }
-
-squareNumber(10)
-    .then(squaredNumber => console.log("The squredNumber is: " + squaredNumber))
-    .catch(error => console.log(error.message))
