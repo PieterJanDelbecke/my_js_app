@@ -1,18 +1,21 @@
-const student = {
-    name: "John",
-    course: "none"
-}
-const genTechStudent = {
-    course: "GenTech",
-    start: "October",
-}
-const caStudent = {
-    languages: ['Ruby','javascript'],
-    speak: function(){
-        console.log("I can do it")
+let calculate = {
+    add(b){
+        return this.value + b
+    },
+    subtract(b){
+        return this.value - b
+    },
+    multiply(b){
+        return this.value * b
+    },
+    divide(b){
+        return this.value / b
     }
 }
+let Number = function(value){
+    this.value = value
+}
 
-let john = Object.assign(student, genTechStudent,caStudent)
-console.log(john)
-john.speak()
+let numberOfDays = new Number(15)
+numberOfDays = Object.assign(numberOfDays, calculate)
+console.log(numberOfDays.add(5))
