@@ -1,10 +1,32 @@
-let arr1 = [2, 1, 88, 111, 201,3]
-let arr2 = arr1.sort()
-console.log(arr2)   // will return [ 1, 111, 2, 201, 3, 88 ]
+let obj ={
+    firstName: "Pieter",
+    lastName: "Delbecke",
+    address: {
+        street: 'George Street',
+        number: '99',
+        city: "Sydney"
+    }
+}
+// update a value of a property 
+console.log(obj.address.city)
+obj.address.city = 'Melbourne'
+console.log(obj.address.city)
+console.log(obj)
 
+// delete a property
+delete obj.lastName
+console.log(obj)
 
-let arr3 = arr1.sort((a,b)=> a - b)     // when a < b : will return a negative value
-                                        // when a > b : will return a positive value
-                                        // when a = b : will return 0
+// add a property
+obj.lastName = 'back'
+obj.address.postcode = 2000
+console.log(obj)
 
-console.log(arr3)   // [ 1, 2, 3, 88, 111, 201 ]
+// iterate through the object
+// for in loop
+
+for (variable in obj){
+    console.log(variable)
+    console.log(obj[variable])
+}
+
