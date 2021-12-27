@@ -1,32 +1,34 @@
-let obj ={
-    firstName: "Pieter",
-    lastName: "Delbecke",
-    address: {
-        street: 'George Street',
-        number: '99',
-        city: "Sydney"
+class Car {
+    constructor(brand) {
+      this.carname = brand;
     }
-}
-// update a value of a property 
-console.log(obj.address.city)
-obj.address.city = 'Melbourne'
-console.log(obj.address.city)
-console.log(obj)
-
-// delete a property
-delete obj.lastName
-console.log(obj)
-
-// add a property
-obj.lastName = 'back'
-obj.address.postcode = 2000
-console.log(obj)
-
-// iterate through the object
-// for in loop
-
-for (variable in obj){
-    console.log(variable)
-    console.log(obj[variable])
-}
-
+    present() {
+      return 'I have a ' + this.carname;
+    }
+  }
+  
+  class Model extends Car {
+    constructor(brand, mod) {
+      super(brand);
+      this.model = mod;
+    }
+    show() {
+      return this.present() + ', it was made in ' + this.model;
+    }
+  }
+  
+  let makes = ["Ford", "Holden", "Toyota"]
+  let models = Array.from(new Array(40), (x,i) => i + 1980)
+  
+  function randomIntFromInterval(min,max) { // min and max included
+      return Math.floor(Math.random()*(max-min+1)+min);
+  }
+  
+  for (model of models) {
+  
+    make = makes[randomIntFromInterval(0,makes.length-1)]
+    model = models[randomIntFromInterval(0,makes.length-1)]
+  
+    mycar = new Model(make, model);
+    console.log(mycar.show())
+  }

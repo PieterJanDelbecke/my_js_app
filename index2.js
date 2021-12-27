@@ -1,11 +1,19 @@
-async function getPokemonTeam(teamSize){
-    try{
-        for (let i = 0; i < teamSize; i++){
-                let respones = await fetch(getRandomPokeUrl())
-                let pokemon = await Response.json()
-                ShowPokemon(pokemon)
-        }
-    } catch(error){
-        console.log(error)
+function Person(name, age){
+    this.name = name
+    this.age = age
+    this.awesome = true
+}
+
+let instructor = new Person ('Pieter-Jan','40')
+
+
+function Hero (name,level){
+    this.name = name;
+    this.level = level;
+    this.shout = function (){
+        return `My name is ${this.name}!`
     }
 }
+
+let trooper = new Hero("King Kong", 4)
+console.log(trooper.shout())
