@@ -1,13 +1,22 @@
-class Rectangle {
-    constructor(width,height){
-        this.width = width
-        this.height = height
+class Animal {
+    constructor(name){
+        this.name = name
     }
-    area(){
-        return this.height * this.width
+    speak(){
+        return `My name is ${this.name}`
     }
 }
 
-let rect = new Rectangle (10, 5)
-console.log(rect)
-console.log(rect.area())
+class Dog extends Animal {
+    constructor(name, breed){
+        super(name)
+        this.breed = breed
+    }
+    speak(){
+        return `Woof! ${super.speak()}, I'm a ${this.breed}`
+    }
+}
+let fran = new Animal("frog")
+let ted = new Dog ("Ted", "Border Collie")
+console.log(fran.speak())
+console.log(ted.speak())
