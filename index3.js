@@ -1,10 +1,12 @@
-function evenChars(string){
-    if (2 > string.length || string.length > 100 ) return 'invalid string'
-    return string.split('').filter((item, index) =>{
-        return index % 2 !=0
-    })
+function isMonotone(arr){
+    for(let i=0; arr.length-1; i++){
+        if(arr[i]> arr[i+1]) {
+            return false
+        }
+    }
+    return true
 }
-    
 
-console.log(evenChars("a"))
-console.log(evenChars ("abcdefghijklm"))
+// console.log(isMonotone([1,2,3]))
+// console.log(isMonotone([3,2,1]))
+console.log("Hello World")
