@@ -1,21 +1,23 @@
-let calculate = {
-    add(b){
-        return this.value + b
+const area = {
+    setUnits(units){
+        this.units = units
     },
-    subtract(b){
-        return this.value - b
+    getArea(){
+        return this.length * this.width
     },
-    multiply(b){
-        return this.value * b
-    },
-    divide(b){
-        return this.value / b
+    areaToString(){
+        return `${this.getArea()}${this.units}`
     }
 }
-let Number = function(value){
-    this.value = value
+
+class Rectangle{
+    constructor(length, width){
+        this.length = length
+        this.width = width
+    }
 }
 
-let numberOfDays = new Number(15)
-numberOfDays = Object.assign(numberOfDays, calculate)
-console.log(numberOfDays.add(5))
+Object.assign(Rectangle.prototype,area)
+let shape = new Rectangle(3,5)
+shape.setUnits("cm")
+console.log(shape.areaToString())
