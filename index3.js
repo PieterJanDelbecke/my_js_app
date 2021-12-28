@@ -1,12 +1,26 @@
-function isMonotone(arr){
-    for(let i=0; arr.length-1; i++){
-        if(arr[i]> arr[i+1]) {
-            return false
-        }
-    }
-    return true
+let user = {
+    firstName: "Adam",
+    lastName: "Ant",
+    age: 35,
+    isAdmin: false,
+    courses: ["html", "css","js"],
+    wife: null
+}
+let str = JSON.stringify(user)
+console.log(str)
+console.log(typeof str)
+
+/*
+the JSON encoded object:
+{
+    "firstName": "Adam",
+    "lastName": "Ant",
+    "age": 35,
+    "isAdmin": false,
+    "courses": ["html", "css", "js"]
+    "wife": null
 }
 
-// console.log(isMonotone([1,2,3]))
-// console.log(isMonotone([3,2,1]))
-console.log("Hello World")
+typeof str is string
+
+*/
