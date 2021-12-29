@@ -4,23 +4,32 @@ let user = {
     age: 35,
     isAdmin: false,
     courses: ["html", "css","js"],
-    wife: null
+    wife: null,
+    hobbies:{
+        indoors: "yoga",
+        outdoors: "cycling"
+    }
 }
-let str = JSON.stringify(user)
+ function replacer (key, value){
+    if (typeof value === 'string'){
+        return "updated"
+    }
+    return value
+ }
+
+let str = JSON.stringify(user, replacer)
 console.log(str)
-console.log(typeof str)
 
 /*
-the JSON encoded object:
-{
-    "firstName": "Adam",
-    "lastName": "Ant",
-    "age": 35,
-    "isAdmin": false,
-    "courses": ["html", "css", "js"]
-    "wife": null
-}
+user converted to JSON:
 
-typeof str is string
+{
+    "fistName": "updated",
+    "lastName": "updated",
+    "age": 35,
+    isAdmin: false,
+    courses: ["html","css","js"],
+    hobbies:{"indoors": "updated", "outdoors":"updated"}
+}
 
 */
