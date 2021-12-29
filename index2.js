@@ -1,23 +1,7 @@
-const area = {
-    setUnits(units){
-        this.units = units
-    },
-    getArea(){
-        return this.length * this.width
-    },
-    areaToString(){
-        return `${this.getArea()}${this.units}`
-    }
-}
+function incrementer(nums) { 
+    return nums.map((value,index)=>{
+            return (value + index + 1)%10
+    })
+  }
 
-class Rectangle{
-    constructor(length, width){
-        this.length = length
-        this.width = width
-    }
-}
-
-Object.assign(Rectangle.prototype,area)
-let shape = new Rectangle(3,5)
-shape.setUnits("cm")
-console.log(shape.areaToString())
+console.log(incrementer([3, 6, 9, 8, 9]))

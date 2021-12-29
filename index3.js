@@ -1,19 +1,4 @@
-let user = {
-    firstName: "Adam",
-    lastName: "Ant",
-    age: 35
-}
+let models = Array.from(new Array(40), (x,i) => i + 1980)
 
-let str = JSON.stringify(user,null, 4)
-console.log(str)
+console.log(models)
 
-/*
-user converted to JSON:
-
-{
-    "fistName": "Adam",
-    "lastName": "Ant",
-    "age": 35
-}
-
-*/
