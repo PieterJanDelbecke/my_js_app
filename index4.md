@@ -58,4 +58,5 @@ At any time you can run `yarn test` to see your progress. By default it will run
 7. Wait and watch the final tests run, if you are successful it will automatically let your educators know you are finished.
 
 ## Example solution
-An example solution can be found in the challenge-complete branch of this repository.
+An example solution can be found in the challenge-complete branch of this repository
+
